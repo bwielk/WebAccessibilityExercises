@@ -19,6 +19,13 @@ page('/:slug', function(context) {
   newMenuItem.classList.add('is-active');
   newPage.classList.add('is-active');
 
+  if(isFirstPage){
+    isFirstPage = false;
+    return;
+  }
+
+  newPage.querySelector('h2').focus();
+
 });
 
 page({
